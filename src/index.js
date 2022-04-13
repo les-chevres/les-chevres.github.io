@@ -1,15 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import ChevreSelector from './ChevreSelector';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+const App = () => {
+
+
+    return (
+        <div>
+            <h1>Les Chèvres</h1>
+            <h2>Qui sommes nous ?</h2>
+            <p>Paragraphe de presentation du collectif de BG que nous sommes !</p>
+            <ChevreSelector />
+        </div>
+    );
+};
+
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
