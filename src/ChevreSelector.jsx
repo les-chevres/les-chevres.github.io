@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Chevre from "./Chevre";
+import CV from "./CV";
 
 const ChevreSelector = () => {
 
@@ -7,6 +8,8 @@ const ChevreSelector = () => {
         {id: 0, selected: false, nom : "Grodet", prenom : "Maxime", age : "22 ans", picture : ""},
         {id: 1, selected: false, nom : "Ait-Mansour", prenom : "Yassin", age : "22 ans", picture : ""},
     ]);
+
+    const [selectedChevre, setSelectedChevre] = useState();
 
     const handleClick = (id) => {
         const updatedChevres = [...chevres];
@@ -19,6 +22,7 @@ const ChevreSelector = () => {
             }
         });
         setChevres([...updatedChevres]);
+        setSelectedChevre(id);
     };
 
     return (
@@ -29,6 +33,7 @@ const ChevreSelector = () => {
                     <Chevre key={chevre.id} chevre={chevre} onChange={handleClick} />
                 ))}
             </div>
+            <CV id={selectedChevre} />
         </div>
     );
 };
