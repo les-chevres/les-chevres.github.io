@@ -3,20 +3,17 @@ import React, { useState } from "react";
 const CV = ({id}) => {
 
     const [CV, setCV] = useState([
-        {id: 0, txt:"cv de maxime", img : ""},
-        {id: 1, txt:"cv de yassin", img : ""},
+        {id: 0, txt: "cv a malinx"},
+        {id: 1, txt: "cv a yassin"},
     ]);
 
-    if (id != null) {
+    if(id != null){
         return (
             <div>
-                <h2>{CV[id].txt}</h2>
+                <h2>CV de {CV[id].txt}</h2>
             </div>
         );
-    } else {
-        return null;
     }
-    
 };
 
 export default CV;
