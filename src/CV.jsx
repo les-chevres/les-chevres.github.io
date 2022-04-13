@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
 const CV = ({id}) => {
-    const [CV, setCV] = useState([
+    const CV = useState([
         {id: 0, txt: "cv a malinx"},
         {id: 1, txt: "cv a yassin"},
-    ]);
+    ])[0];
 
     if(id != null){
         return (
