@@ -24,9 +24,9 @@ const ChevreSelector = () => {
     return (
         <div>
             <h2>Les membres chèvres :</h2>
-            <div class="chevreList">
+            <div className="chevreList">
                 {chevres.map(chevre => (
-                    <Chevre chevre={chevre} onChange={handleClick} />
+                    <Chevre key={chevre.id} chevre={chevre} onChange={handleClick} />
                 ))}
             </div>
         </div>
