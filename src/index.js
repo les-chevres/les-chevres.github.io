@@ -14,6 +14,7 @@ const App = () => {
         {id: 0, selected: true, nom : "Acceuil", prenom : "", age : "", picture : ppchevre},
         {id: 1, selected: false, nom : "Grodet", prenom : "Maxime", age : "22 ans", picture : ppmalinx},
         {id: 2, selected: false, nom : "Ait-Mansour", prenom : "Yassin", age : "22 ans", picture : ppilyn},
+        {id: 3, selected: false, nom : "Levesque", prenom : "Gautier", age "24 ans", picture : ppGoat},
     ]);
     
 
