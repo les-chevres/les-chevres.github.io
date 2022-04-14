@@ -1,20 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import ChevreSelector from './ChevreSelector';
 import { createRoot } from 'react-dom/client';
+import Start from './Start';
 
 const App = () => {
 
+    const [layout, setLayout] = useState([
+        {id: 0, selected: false},
+    ]);
 
-    return (
-        <div>
-            <h1>Les Chèvres</h1>
-            <h2>Qui sommes nous ?</h2>
-            <p>Paragraphe de presentation du collectif de BG que nous sommes !</p>
-            <ChevreSelector />
-        </div>
-    );
+    const handleClick = (id) => {
+        if (id === 0) {
+            setLayout(1, true);
+        }
+    };
+
+    if (layout.id === 1) {
+        return(
+            <div>
+                <ChevreSelector />
+            </div>
+        );
+    } else {
+        return (
+            <div>
+                <h1>Les Chèvres</h1>
+                <h2>Qui sommes nous ?</h2>
+                <p>Paragraphe de presentation du collectif de BG que nous sommes !</p>
+                <Start key={layout.id} layout={layout} onChange={handleClick} />
+            </div>
+        );
+    }
 };
 
 const container = document.getElementById('root');
