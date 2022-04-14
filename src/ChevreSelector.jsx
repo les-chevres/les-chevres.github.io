@@ -1,39 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import Chevre from "./Chevre";
-import CV from "./CV";
 
-const ChevreSelector = () => {
-
-    const [chevres, setChevres] = useState([
-        {id: 0, selected: true, nom : "Grodet", prenom : "Maxime", age : "22 ans", picture : ""},
-        {id: 1, selected: false, nom : "Ait-Mansour", prenom : "Yassin", age : "22 ans", picture : ""},
-    ]);
-
-    const [selectedChevre, setSelectedChevre] = useState();
-
-    const handleClick = (id) => {
-        const updatedChevres = [...chevres];
-        updatedChevres.forEach(chevre => {
-            if (chevre.id === id) {
-                chevre.selected = true;
-            }
-            else{
-                chevre.selected = false;
-            }
-        });
-        setChevres([...updatedChevres]);
-        setSelectedChevre(id);
-    };
+const ChevreSelector = ({chevres, handleSelect}) => {
 
     return (
-        <div>
-            <h2>Les membres chèvres :</h2>
+        <div className="chevreSelector">
             <div className="chevreList">
                 {chevres.map(chevre => (
-                    <Chevre key={chevre.id} chevre={chevre} onChange={handleClick} />
+                    <Chevre key={chevre.id} chevre={chevre} onChange={handleSelect} />
                 ))}
             </div>
-            <CV id={selectedChevre} />
         </div>
     );
 };
