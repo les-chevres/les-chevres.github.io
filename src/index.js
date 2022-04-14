@@ -5,6 +5,7 @@ import './index.css';
 import ChevreSelector from './ChevreSelector';
 import CV from "./CV";
 import ppmalinx from './images/ppmalinx.png';
+import ppilyn from './images/ppilyn.png';
 import ppchevre from './images/chevre.png';
 
 const App = () => {
@@ -12,7 +13,7 @@ const App = () => {
     const [chevres, setChevres] = useState([
         {id: 0, selected: true, nom : "Acceuil", prenom : "", age : "", picture : ppchevre},
         {id: 1, selected: false, nom : "Grodet", prenom : "Maxime", age : "22 ans", picture : ppmalinx},
-        {id: 2, selected: false, nom : "Ait-Mansour", prenom : "Yassin", age : "22 ans", picture : ""},
+        {id: 2, selected: false, nom : "Ait-Mansour", prenom : "Yassin", age : "22 ans", picture : ppilyn},
     ]);
     
 
