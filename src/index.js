@@ -5,7 +5,7 @@ import './index.css';
 import ChevreSelector from './ChevreSelector';
 import CV from "./CV";
 import ppmalinx from './images/ppmalinx.png';
-import ppilyn from './images/ppilyn.png';
+import ppilyn from './images/ppilyn.gif';
 import ppchevre from './images/chevre.png';
 
 const App = () => {
