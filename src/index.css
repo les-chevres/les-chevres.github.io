@@ -5,6 +5,8 @@ body {
         sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-color: #23272a;
+    color: #ffffff;
 }
 
 code {
@@ -36,6 +38,7 @@ h2 {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     align-content: flex-start;
+    background-color: #2c2f33;
 }
 
 .chevre {
